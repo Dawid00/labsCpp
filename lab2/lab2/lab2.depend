@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1615381247 source:c:\acod\projects\laboratoriumpocpp\lab2\lab2\main.cpp
+	<iostream>
+	<cstdlib>
+	<math.h>
+	"TEmployee.h"
+	"Tstudent.h"
+
+1615377388 c:\acod\projects\laboratoriumpocpp\lab2\lab2\include\temployee.h
+	<string>
+
+1615377437 source:c:\acod\projects\laboratoriumpocpp\lab2\lab2\src\temployee.cpp
+	"TEmployee.h"
+	<iostream>
+
+1615381788 source:c:\acod\projects\laboratoriumpocpp\lab2\lab2\src\tstudent.cpp
+	"Tstudent.h"
+	<iomanip>
+	<iostream>
+
+1615381567 c:\acod\projects\laboratoriumpocpp\lab2\lab2\include\tstudent.h
+	<iostream>
+
