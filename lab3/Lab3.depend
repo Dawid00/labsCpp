@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1616022408 source:c:\users\dawid\desktop\2sem\po c++\lab\lab3-metody klasy konstruktory przetwarzanie obiektow\plewikdawidlab3\main.cpp
+	<iostream>
+	"TOsoba.h"
+	"Ttrojkat.h"
+
+1615984160 source:c:\users\dawid\desktop\2sem\po c++\lab\lab3-metody klasy konstruktory przetwarzanie obiektow\plewikdawidlab3\src\tosoba.cpp
+	"TOsoba.h"
+	<iostream>
+	<stdio.h>
+	<string.h>
+
+1615984048 c:\users\dawid\desktop\2sem\po c++\lab\lab3-metody klasy konstruktory przetwarzanie obiektow\plewikdawidlab3\include\tosoba.h
+	<iostream>
+
+1616022414 c:\users\dawid\desktop\2sem\po c++\lab\lab3-metody klasy konstruktory przetwarzanie obiektow\plewikdawidlab3\include\ttrojkat.h
+
+1616022497 source:c:\users\dawid\desktop\2sem\po c++\lab\lab3-metody klasy konstruktory przetwarzanie obiektow\plewikdawidlab3\src\ttrojkat.cpp
+	"Ttrojkat.h"
+	<math.h>
+
