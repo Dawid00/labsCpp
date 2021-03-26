@@ -10,7 +10,7 @@ float srednia(float *tab, int tabSize)
     {
         suma += tab[i];
     }
-    return suma / (float)tabSize ;
+    return suma / tabSize ;
 }
 
 Tstudent::Tstudent()

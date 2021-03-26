@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1616624054 source:c:\users\dawid\desktop\2sem\po c++\lab\lab4-stringi\plewikdawidlab4\plewikdawidlab4\main.cpp
+	<iostream>
+	<string>
+	"Tdata.h"
+	"Tosoba.h"
+	"TosobaS.h"
+
+1616588151 source:c:\users\dawid\desktop\2sem\po c++\lab\lab4-stringi\plewikdawidlab4\plewikdawidlab4\src\tdata.cpp
+	"Tdata.h"
+	<iostream>
+
+1616585779 c:\users\dawid\desktop\2sem\po c++\lab\lab4-stringi\plewikdawidlab4\plewikdawidlab4\include\tdata.h
+
+1616589150 c:\users\dawid\desktop\2sem\po c++\lab\lab4-stringi\plewikdawidlab4\plewikdawidlab4\include\tosoba.h
+	"Tdata.h"
+	<string>
+
+1616590934 source:c:\users\dawid\desktop\2sem\po c++\lab\lab4-stringi\plewikdawidlab4\plewikdawidlab4\src\tosoba.cpp
+	"Tosoba.h"
+	"Tdata.h"
+	<iostream>
+	<string>
+
+1616623188 source:c:\users\dawid\desktop\2sem\po c++\lab\lab4-stringi\plewikdawidlab4\plewikdawidlab4\src\tosobas.cpp
+	"TosobaS.h"
+	<string>
+	<iostream>
+	<string.h>
+
+1616599735 c:\users\dawid\desktop\2sem\po c++\lab\lab4-stringi\plewikdawidlab4\plewikdawidlab4\include\tosobas.h
+

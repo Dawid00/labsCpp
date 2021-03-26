@@ -2,8 +2,6 @@
 #define TSTUDENT_H
 #include <iostream>
 using namespace std;
-float srednia(float *tab);
-
 class Tstudent
 {
     public:
