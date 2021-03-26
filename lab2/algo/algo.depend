@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1615887336 source:c:\acod\projects\laboratoriumpocpp\lab2\algo\main.cpp
+	<iostream>
+	<time.h>
+
