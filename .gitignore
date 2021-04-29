@@ -6,7 +6,10 @@
 *.lo
 *.o
 *.obj
-
+*.layout
+*.depend
+bin/
+obj/
 # Precompiled Headers
 *.gch
 *.pch
