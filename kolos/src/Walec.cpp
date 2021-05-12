@@ -8,9 +8,9 @@ using namespace std;
 Walec::Walec()
 {
 nazwa = "Walec";
-   kolor="czarny";
-   promien=1;
-   wysokosc = 1;
+kolor = "czarny";
+promien = 1;
+wysokosc = 1;
 }
 
 Walec::Walec(string naz, string kol,int r,int h):Bryla(naz,kol)
@@ -30,9 +30,5 @@ float Walec::obliczPolePodstawy()
 {
  return M_PI * pow(promien,2);
 }
-float Walec::obliczObjetosc()
-{
-float pp = obliczPolePodstawy();
-return pp*wysokosc;
-}
+
 

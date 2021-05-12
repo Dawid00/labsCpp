@@ -10,13 +10,9 @@ class Szescian : public Bryla // dziedziczenie(public) po klasie Bryla
         Szescian();
         Szescian(string naz, string kol,int a);
         virtual ~Szescian();
-        float obliczPolePodstawy(); //przeslanianie metody
-        float obliczObjetosc(); //przeslanianie metody
-
-
+        float obliczPolePodstawy();
     protected:
-        int bok; // pole protected - hermetyzacja
-        int wysokosc; // pole protected - hermetyzacja
+
     private:
 
 

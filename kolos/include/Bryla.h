@@ -11,13 +11,15 @@ public:
     Bryla(string naz, string kol); //konstruktor  z parametrami
     virtual ~Bryla(); //destruktor
     void info(); //metoda
-    virtual float obliczPolePodstawy();
-    virtual float obliczObjetosc();
+    virtual float obliczPolePodstawy()=0;
+    float obliczObjetosc();
 
 
 protected:
     string kolor; //pole
     string nazwa; //pole
+    int bok;
+    int wysokosc;
 
 private:
 };

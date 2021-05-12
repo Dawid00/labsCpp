@@ -6,15 +6,17 @@ using namespace std;
 
 Szescian::Szescian()
 {
-   nazwa = "Szescian";
-   kolor="czarny";
-   bok=1;
-   wysokosc= bok;
+
+    nazwa="Szescian";
+    kolor="czarny";
+    bok=1;
+    wysokosc=bok;
 }
 Szescian::Szescian(string naz, string kol,int a):Bryla(naz,kol)
 {
-bok = a;
-wysokosc = bok;
+    bok = a;
+    wysokosc = bok;
+
 }
 
 Szescian::~Szescian()
@@ -25,11 +27,6 @@ Szescian::~Szescian()
 
 float Szescian::obliczPolePodstawy()
 {
- return bok*bok;
-}
-float Szescian::obliczObjetosc()
-{
-float pp = obliczPolePodstawy();
-return pp*wysokosc;
+    return bok*bok;
 }
 

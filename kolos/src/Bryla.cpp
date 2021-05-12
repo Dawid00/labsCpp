@@ -14,17 +14,12 @@ Bryla::Bryla(string naz, string kol) //konstruktor  z parametrami
 }
 Bryla::~Bryla()
 {
-    //dtor
 }
-float Bryla::obliczPolePodstawy()
-{
-    return 0;
 
-}
 float Bryla::obliczObjetosc()
 {
-    return 0;
-
+    float pp = obliczPolePodstawy();
+    return (pp * wysokosc);
 }
 void Bryla::info()
 {
