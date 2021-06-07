@@ -18,7 +18,7 @@ public:
     void readTeam(QString teamName);
     void saveCompetition();
     void readCompetition();
-
+    void clearFootballers();
     void teamCounter();
 private slots:
     void on_actionOpcje_triggered();

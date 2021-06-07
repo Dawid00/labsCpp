@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
 #include <QString>
 #include <QDebug>
 #include <QTextStream>
@@ -9,10 +8,8 @@
 #include <QProcess>
 #include <QMessageBox>
 int counts = 0;
-QString posi;
+QString position;
 bool dark = false;
-
-
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -21,45 +18,37 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
   ui->teamsCounter->setText(QString::number(counts));
 }
-
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-
 void MainWindow::on_actionOpcje_triggered()
 {
 
 }
-
-
 void MainWindow::on_actionStop_triggered()
 {
 close();
 }
-
-
 void MainWindow::on_actionChange_BackgroundColor_triggered()
 {
-
     if(dark)
  {       setStyleSheet("background-color:white");
     dark=false;
 }    else{
-        setStyleSheet("background-color:grey");
+        setStyleSheet("background-color:#D4D9DB");
         dark =true;
     }
 }
-
 void MainWindow::on_clearList_clicked()
 {
-ui->footballersList->clear();
-//team.deleteFootballers();
-
+clearFootballers();
 }
 
-
+void MainWindow::clearFootballers()
+{
+    ui->footballersList->clear();
+}
 void MainWindow::on_deleteLast_clicked()
 {
     QList<QListWidgetItem*> items = ui->footballersList->selectedItems();
@@ -79,63 +68,23 @@ void MainWindow::on_deleteTeam_clicked()
 
     }
     counts--;
-
-teamCounter();
+    teamCounter();
 }
-
-
 void MainWindow::on_clearList_2_clicked()
 {
     ui->teams->clear();
     counts = 0;
-teamCounter();
-
-
+    teamCounter();
 }
-
-
 void MainWindow::on_addFootballer_clicked()
 {
-  //  string fname=ui->typefirstname->text().toUtf8().constData();
- //   string lname=ui->typelastname->text().toUtf8().constData();
-    //int number = ui->number->value();
+
     QString number = QString::number(ui->number->value());
-    QString itemString = ui->typefirstname->text() + " " + ui->typelastname->text()  + "    " + number + "     " +posi;
+    QString itemString = ui->typefirstname->text() + " " + ui->typelastname->text()  + "    " + number + "     " +position;
     ui->footballersList->addItem(itemString);
     ui->typefirstname->clear();
     ui->typelastname->clear();
-
-
-    // QString itemString = QString::fromStdString(footballer.text());
-   // Footballer footballer(fname,lname,posi,number);
-   // team.addFootballer(footballer);
-
 }
-
-
-void MainWindow::on_st_clicked()
-{
-posi="Napastnik";
-}
-
-
-void MainWindow::on_mid_clicked()
-{
-posi="Pomocnik";
-}
-
-
-void MainWindow::on_def_clicked()
-{
-posi = "Obronca";
-}
-
-
-void MainWindow::on_gk_clicked()
-{
-posi = "Bramkarz";
-}
-
 void MainWindow::saveCompetition()
 {
     QFile file("competiotion.txt");
@@ -155,7 +104,6 @@ void MainWindow::saveCompetition()
              out<<item->text()<<" - " << i+1<<"\n";
 
     }
-
     file.flush();
     file.close();
 }
@@ -209,7 +157,6 @@ void MainWindow::saveTeam(QString teamName)
              out<<item->text();
              out<<"\n";
     }
-
     file.flush();
     file.close();
 
@@ -221,37 +168,24 @@ void MainWindow::teamCounter()
 }
 void MainWindow::on_addTeams_clicked()
 {
-   // string name = ui->teamName->text().toUtf8().constData();
-  //  team.setName(name);
- //  ladder.addTeam(team);
- //QString itemString = QString::fromStdString(team.text());
-
-  // ui->teams->addItem(QString::number(counts) +" " + ui->teamName->text());
     ui->teams->addItem(ui->teamName->text());
     counts ++;
-
-   saveTeam(ui->teamName->text());
-        ui->teamName->clear();
-        teamCounter();
+    saveTeam(ui->teamName->text());
+    ui->teamName->clear();
+    teamCounter();
+    clearFootballers();
 }
-
-
-
 void MainWindow::on_showFootballers_clicked()
 {
     QList<QListWidgetItem*> items = ui->teams->selectedItems();
     foreach(QListWidgetItem* item, items){
-        QString str = item->text();
-
-readTeam(str);
+    QString str = item->text();
+    readTeam(str);
     }
-
 }
-
-
 void MainWindow::on_submit_clicked()
 {
-    saveCompetition();
+   saveCompetition();
    readCompetition();
     switch(counts)
     {
@@ -262,7 +196,6 @@ void MainWindow::on_submit_clicked()
            ui->endview->setText("Musisz wprowadzić conajmniej dwie drużyny");
         break;
     case 2:
-
          ui->endview->setText("Mecz nr 1: 1 - 2");
         break;
     case 3:
@@ -275,7 +208,6 @@ void MainWindow::on_submit_clicked()
     {
       QString  tekst = "Mecz nr 1: 1 - 4\nMecz nr 2: 2 - 3\nMecz nr 3: 4 - 2\nMecz nr 4: 1 - 3\nMecz nr 5: 2 - 1\nMecz nr 6: 3 - 4";
         ui->endview->setText(tekst);
-
        break;
     }
     case 5:
@@ -309,4 +241,21 @@ void MainWindow::on_restart_clicked()
 {
     qApp->quit();
     QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
+}
+
+void MainWindow::on_st_clicked()
+{
+position="Napastnik";
+}
+void MainWindow::on_mid_clicked()
+{
+position="Pomocnik";
+}
+void MainWindow::on_def_clicked()
+{
+position = "Obronca";
+}
+void MainWindow::on_gk_clicked()
+{
+position = "Bramkarz";
 }
