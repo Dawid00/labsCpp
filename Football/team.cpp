@@ -2,9 +2,10 @@
 Team::Team(){}
 Team::Team(string name)
 {
+
     this->name = name;
-    id=counter;
-    counter++;
+  //  id=counter;
+   // counter++;
 
 }
 string Team::getName()

@@ -11,7 +11,7 @@ class Team
 public:
     Team();
     Team(string name);
-    static int counter;
+    //static int counter;
     void setName(string name);
     string text();
     string getName();

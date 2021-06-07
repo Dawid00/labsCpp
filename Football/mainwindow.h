@@ -14,7 +14,12 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void saveTeam(QString teamName);
+    void readTeam(QString teamName);
+    void saveCompetition();
+    void readCompetition();
 
+    void teamCounter();
 private slots:
     void on_actionOpcje_triggered();
 
@@ -40,7 +45,13 @@ private slots:
 
     void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_showFootballers_clicked();
+
+    void on_submit_clicked();
+void on_restart_clicked();
+void on_deleteTeam_clicked();
+
+void on_clearList_2_clicked();
 
 private:
     Ui::MainWindow *ui;

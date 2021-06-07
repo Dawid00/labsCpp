@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.15.0, 2021-06-02T18:42:13. -->
+<!-- Written by QtCreator 4.15.0, 2021-06-07T15:57:55. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -297,8 +297,9 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/dawid/Desktop/2sem/PO c++/lab/Qts/Football/Football.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/dawid/Desktop/2sem/PO c++/lab/Qts/Football/Football.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Football2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Acod/projects/LaboratoriumPOCpp/Football/Football.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Acod/projects/LaboratoriumPOCpp/Football/Football.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
