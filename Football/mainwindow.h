@@ -53,6 +53,8 @@ void on_deleteTeam_clicked();
 
 void on_clearList_2_clicked();
 
+void on_typewpisowe_actionTriggered(int action);
+
 private:
     Ui::MainWindow *ui;
 };

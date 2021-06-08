@@ -16,7 +16,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-  ui->teamsCounter->setText(QString::number(counts));
+    teamCounter();
+    QMessageBox::information(this,"Start","Program ten może Ci pomóc zorganizować turniej piłki nożnej dla maksymalnie 6 drużyn!");
 }
 MainWindow::~MainWindow()
 {
@@ -185,6 +186,10 @@ void MainWindow::on_showFootballers_clicked()
 }
 void MainWindow::on_submit_clicked()
 {
+    QMessageBox::information(this,"Zatwierdzenie turnieju!","Po zatwierdzeniu drużyn nie będzie można ich modyfikować!");
+    if(QMessageBox::question(this,"Zatwierdzenie turnieju!","Czy na pewno chcesz zatwierdzić drużyny?",
+    QMessageBox::Yes | QMessageBox::No ) != QMessageBox::No)
+{
    saveCompetition();
    readCompetition();
     switch(counts)
@@ -234,6 +239,15 @@ void MainWindow::on_submit_clicked()
        break;
         }
     }
+    ui->torunament->setText(ui->tournamentName->text());
+
+    int stawka = ui->typewpisowe->value();
+    int winnerPrize = counts * stawka;
+
+    ui->prize->setText(QString::number(winnerPrize)+" zl");
+
+    }
+
 }
 
 
@@ -259,3 +273,9 @@ void MainWindow::on_gk_clicked()
 {
 position = "Bramkarz";
 }
+
+void MainWindow::on_typewpisowe_actionTriggered(int action)
+{
+ui->wpisowe->setText(QString::number(ui->typewpisowe->value() + 1)+" zl");
+}
+
