@@ -190,6 +190,7 @@ void MainWindow::on_submit_clicked()
     if(QMessageBox::question(this,"Zatwierdzenie turnieju!","Czy na pewno chcesz zatwierdzić drużyny?",
     QMessageBox::Yes | QMessageBox::No ) != QMessageBox::No)
 {
+     QMessageBox::information(this,"Zatwierdzenie turnieju!","Zwyciezca turnieju zgarnia cala pule! Powodzenia");
    saveCompetition();
    readCompetition();
     switch(counts)
